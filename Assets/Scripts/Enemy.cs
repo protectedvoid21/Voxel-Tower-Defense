@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour {
 
     private void Update() {
         transform.position = Vector3.MoveTowards(transform.position, waypoints[waypointIndex].position, speed * Time.deltaTime);
+        transform.rotation = Quaternion.LookRotation(waypoints[waypointIndex].position - transform.position);
 
         if(Vector3.Distance(transform.position, waypoints[waypointIndex].position) < 0.01f) {
             waypointIndex++;

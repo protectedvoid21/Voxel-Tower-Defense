@@ -121,6 +121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3594157660726498133}
+  - component: {fileID: 2111750975}
   m_Layer: 0
   m_Name: Basic Tower
   m_TagString: Untagged
@@ -137,13 +138,29 @@ Transform:
   m_GameObject: {fileID: 5392893067773377272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.48343, y: 0.48343, z: 0.48343}
   m_Children:
   - {fileID: 4988273530729912832}
   - {fileID: 1079087739401949533}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2111750975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5392893067773377272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ef9e77b94959cd459211687cb88f58a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  range: 3
+  rateOfFire: 0
+  partToRotate: {fileID: 1079087739401949533}
 --- !u!1 &5652643104991445178
 GameObject:
   m_ObjectHideFlags: 0

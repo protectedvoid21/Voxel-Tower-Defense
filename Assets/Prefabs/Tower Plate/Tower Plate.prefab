@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1777464166913060138}
+  - component: {fileID: 9187840741781686185}
+  - component: {fileID: 2673209962297541130}
   m_Layer: 0
   m_Name: Tower Plate
   m_TagString: Untagged
@@ -32,6 +34,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &9187840741781686185
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4849551188462056550}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.0097294, y: 0.31017452, z: 4.013207}
+  m_Center: {x: -1.3106546, y: 0.16142747, z: 1.5}
+--- !u!114 &2673209962297541130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4849551188462056550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea405f9a88a772e4484f0683eb3f2019, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverElement: {fileID: 3689420458587578380}
+  hoverColor: {r: 0.10329389, g: 1, b: 0.0047169924, a: 0}
 --- !u!1001 &4791784295285237124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83,9 +112,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7635826562936255635, guid: 40b316db1c95674459d25a24899c864a, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7635826562936255635, guid: 40b316db1c95674459d25a24899c864a, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 40b316db1c95674459d25a24899c864a, type: 3}
       propertyPath: m_Name
-      value: towerPlate1-0
+      value: Inside
       objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: 40b316db1c95674459d25a24899c864a, type: 3}
       propertyPath: m_IsActive
@@ -96,6 +133,11 @@ PrefabInstance:
 --- !u!4 &5041057475751101039 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 40b316db1c95674459d25a24899c864a, type: 3}
+  m_PrefabInstance: {fileID: 4791784295285237124}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3689420458587578380 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 40b316db1c95674459d25a24899c864a, type: 3}
   m_PrefabInstance: {fileID: 4791784295285237124}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8210431901116804430
@@ -151,7 +193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7036cfe70caa1824281fc53189c5cabb, type: 3}
       propertyPath: m_Name
-      value: towerPlate1-1
+      value: Package
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7036cfe70caa1824281fc53189c5cabb, type: 3}

@@ -27,6 +27,8 @@ public class WaveSpawner : MonoBehaviour {
     public float timeBetweenWaves;
     private float timeCountdown;
 
+    private bool spawning = false;
+
     private void Start() {
         waveType = WaveType.Waiting;
     }
@@ -36,11 +38,13 @@ public class WaveSpawner : MonoBehaviour {
             timeCountdown -= Time.deltaTime;
             if(timeCountdown <= 0) {
                 timeCountdown = timeBetweenWaves;
-                waveType = WaveType.InGame;
+                waveType = WaveType.Spawning;
             }
         }
         if(waveType == WaveType.Spawning) {
-            StartCoroutine(SpawnWave());
+            if(!spawning) {
+                StartCoroutine(SpawnWave());
+            }
         }
         if(waveType == WaveType.InGame) {
             if(!isEnemyAlive()) {
@@ -50,13 +54,16 @@ public class WaveSpawner : MonoBehaviour {
     }
 
     private IEnumerator SpawnWave() {
-        waveIndex++;
+        spawning = true;
         for(int i = 0; i < waves[waveIndex].enemyList.Length; i++) {
-            for(int j = 0; j < waves[waveIndex].enemyList[j].count; j++) {
-                Instantiate(waves[waveIndex].enemyList[j].enemy, spawnPoint.position, Quaternion.identity);
+            for(int j = 0; j < waves[waveIndex].enemyList[i].count; j++) {
+                Instantiate(waves[waveIndex].enemyList[i].enemy, spawnPoint.position, Quaternion.identity);
                 yield return new WaitForSeconds(waves[waveIndex].delay);
             }
         }
+        waveIndex++;
+        waveType = WaveType.InGame;
+        spawning = false;
     }
 
     private bool isEnemyAlive() {
