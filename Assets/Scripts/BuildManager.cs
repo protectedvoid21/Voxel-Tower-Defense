@@ -1,16 +1,9 @@
 using UnityEngine;
 
-public class BuildManager : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public class BuildManager : MonoBehaviour {
+    public GameObject tower;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void Build(Plate plate) {
+        Instantiate(tower, plate.transform.position, Quaternion.identity);
     }
 }

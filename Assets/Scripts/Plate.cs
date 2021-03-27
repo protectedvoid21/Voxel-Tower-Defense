@@ -9,14 +9,19 @@ public class Plate : MonoBehaviour {
 
     private void Start() {
         hoverRenderer = hoverElement.GetComponent<MeshRenderer>();
-        hoverColor = hoverRenderer.sharedMaterial.color;
+        defaultColor = hoverRenderer.sharedMaterial.color;
     }
 
-    private void Update() {
-        hoverRenderer.sharedMaterial.color = defaultColor;
+    private void OnMouseDown() {
+        BuildManager buildManager = FindObjectOfType<BuildManager>();
+        buildManager.Build(this);
     }
 
     private void OnMouseOver() {
-        hoverRenderer.sharedMaterial.color = hoverColor;
+        hoverRenderer.material.color = hoverColor;
+    }
+
+    private void OnMouseExit() {
+        hoverRenderer.material.color = defaultColor;
     }
 }
