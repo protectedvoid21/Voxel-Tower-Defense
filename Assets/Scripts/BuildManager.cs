@@ -24,7 +24,7 @@ public class BuildManager : MonoBehaviour {
     }
 
     public void Build(Plate plate) {
-        if(towerToBuild != null && canBuild) {
+        if(towerToBuild != null && canBuild || !plate.hasTower) {
             PlayerStats.RemoveCash(towerToBuild.cost);
             Instantiate(towerToBuild.towerPrefab, plate.transform.position, Quaternion.identity);
         }

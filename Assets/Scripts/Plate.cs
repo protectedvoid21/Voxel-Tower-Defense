@@ -9,6 +9,7 @@ public class Plate : MonoBehaviour {
     public Color noBuildColor;
 
     private BuildManager buildManager;
+    public bool hasTower = false;
 
     private void Start() {
         hoverRenderer = hoverElement.GetComponent<MeshRenderer>();
@@ -17,14 +18,17 @@ public class Plate : MonoBehaviour {
     }
 
     private void OnMouseDown() {
-        buildManager.Build(this);
+        if(!hasTower) {
+            buildManager.Build(this);
+            hasTower = true;
+        }
     }
 
     private void OnMouseOver() {
         if(buildManager.canBuild) {
             hoverRenderer.material.color = hoverColor;
         }
-        else {
+        if(!buildManager.canBuild || hasTower){
             hoverRenderer.material.color = noBuildColor;
         }
     }

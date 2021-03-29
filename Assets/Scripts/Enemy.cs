@@ -1,12 +1,15 @@
 using UnityEngine;
 
 public class Enemy : MonoBehaviour {
+    public int maxHealth;
+    private int health;
     public float speed;
     
     private Transform[] waypoints;
     private int waypointIndex = 0;
 
     private void Awake() {
+        health = maxHealth;
         waypoints = GameObject.FindObjectOfType<Waypoints>().waypoints;
         transform.position = waypoints[waypointIndex].position;
         waypointIndex++;
@@ -21,6 +24,13 @@ public class Enemy : MonoBehaviour {
         }
 
         if(waypointIndex == waypoints.Length) {
+            Destroy(gameObject);
+        }
+    }
+
+    public void GetDamage(int damage) {
+        health -= damage;
+        if(health < 0) {
             Destroy(gameObject);
         }
     }

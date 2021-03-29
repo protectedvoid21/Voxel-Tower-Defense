@@ -37,14 +37,16 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Waypoints.cs" />
+     <Compile Include="Assets\Scripts\ShopManager.cs" />
+     <Compile Include="Assets\Scripts\TowerType.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\Plate.cs" />
      <Compile Include="Assets\Scripts\WaveSpawner.cs" />
+     <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\Tower.cs" />
      <Compile Include="Assets\Scripts\BuildManager.cs" />
      <Compile Include="Assets\Scripts\PlayerStats.cs" />
-     <Compile Include="Assets\Scripts\ShopManager.cs" />
-     <Compile Include="Assets\Scripts\TowerType.cs" />
+     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
