@@ -8,7 +8,7 @@ public class BuildManager : MonoBehaviour {
     public bool canBuild { 
         get {
             if(towerToBuild != null) {
-                return PlayerStats.money > towerToBuild.cost;
+                return PlayerStats.money >= towerToBuild.cost;
             }
         return false;
     }}
@@ -18,13 +18,13 @@ public class BuildManager : MonoBehaviour {
     }
     
     public void SelectBuildTower(TowerType tower) {
-        if(PlayerStats.money > tower.cost) {
+        if(PlayerStats.money >= tower.cost) {
             towerToBuild = tower;
         }
     }
 
     public void Build(Plate plate) {
-        if(towerToBuild != null && canBuild || !plate.hasTower) {
+        if(towerToBuild != null && canBuild && !plate.hasTower) {
             PlayerStats.RemoveCash(towerToBuild.cost);
             Instantiate(towerToBuild.towerPrefab, plate.transform.position, Quaternion.identity);
         }

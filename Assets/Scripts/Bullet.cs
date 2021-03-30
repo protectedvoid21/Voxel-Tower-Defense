@@ -25,7 +25,7 @@ public class Bullet : MonoBehaviour {
 
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
-        if(Vector3.Distance(transform.position, target.position) < 0.1f) {
+        if(Vector3.Distance(transform.position, target.position) < 0.5f) {
             target.GetComponent<Enemy>().GetDamage(damage);
             Destroy(gameObject);
         }

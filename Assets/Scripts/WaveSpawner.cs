@@ -6,11 +6,11 @@ public class WaveSpawner : MonoBehaviour {
     public class Wave {
         public string name;
         public float delay;
-        public EnemyType[] enemyList;
+        public EnemyList[] enemyList;
 
         [System.Serializable]
-        public class EnemyType {
-            public GameObject enemy;
+        public class EnemyList {
+            public EnemyType enemy;
             public int count;
         }
     }
@@ -57,7 +57,7 @@ public class WaveSpawner : MonoBehaviour {
         spawning = true;
         for(int i = 0; i < waves[waveIndex].enemyList.Length; i++) {
             for(int j = 0; j < waves[waveIndex].enemyList[i].count; j++) {
-                Instantiate(waves[waveIndex].enemyList[i].enemy, spawnPoint.position, Quaternion.identity);
+                Instantiate(waves[waveIndex].enemyList[i].enemy.prefab, spawnPoint.position, Quaternion.identity);
                 yield return new WaitForSeconds(waves[waveIndex].delay);
             }
         }

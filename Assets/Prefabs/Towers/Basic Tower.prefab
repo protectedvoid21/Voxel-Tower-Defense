@@ -274,7 +274,8 @@ MonoBehaviour:
   rateOfFire: 1
   bulletSpeed: 5
   partToRotate: {fileID: 3750203528297721988}
-  shootPosition: {fileID: 8386081961816610949}
+  shootPosition:
+  - {fileID: 8386081961816610949}
   bullet: {fileID: 8865170543294560546, guid: 747592800dd454b46a0e72880be4c2ec, type: 3}
 --- !u!1 &8394971791906431331
 GameObject:

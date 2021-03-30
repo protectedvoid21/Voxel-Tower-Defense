@@ -23,7 +23,7 @@ public class ShopManager : MonoBehaviour {
     public void SelectTower(string tower) {
         for(int i = 0; i < towerList.Length; i++) {
             if(towerList[i].towerType.name == tower) {
-                if(towerList[i].towerType.cost < PlayerStats.money) {
+                if(towerList[i].towerType.cost <= PlayerStats.money) {
                     buildManager.SelectBuildTower(towerList[i].towerType);
                 }
                 return;

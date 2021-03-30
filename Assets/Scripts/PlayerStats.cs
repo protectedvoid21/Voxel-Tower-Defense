@@ -21,7 +21,7 @@ public class PlayerStats : MonoBehaviour {
     }
 
     public static void RemoveCash(int amount) {
-        if(money - amount > 0) {
+        if(money - amount >= 0) {
             money -= amount;
         }
     }

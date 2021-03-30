@@ -1,15 +1,19 @@
 using UnityEngine;
 
 public class Enemy : MonoBehaviour {
-    public int maxHealth;
+    private int maxHealth;
     private int health;
-    public float speed;
+    private float speed;
     
     private Transform[] waypoints;
     private int waypointIndex = 0;
 
+    public void Init(int maxHealth, float speed) {
+        maxHealth = this.maxHealth;
+        speed = this.speed;
+    }
+
     private void Awake() {
-        health = maxHealth;
         waypoints = GameObject.FindObjectOfType<Waypoints>().waypoints;
         transform.position = waypoints[waypointIndex].position;
         waypointIndex++;

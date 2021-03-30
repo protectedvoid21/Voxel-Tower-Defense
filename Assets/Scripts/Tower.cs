@@ -8,9 +8,10 @@ public class Tower : MonoBehaviour {
     public float bulletSpeed;
 
     public Transform partToRotate;
-    public Transform shootPosition;
+    public Transform[] shootPosition;
     
     private bool isShooting = false;
+    private int shootIndex = 0;
     public GameObject bullet;
     
     private void Update() {
@@ -34,7 +35,12 @@ public class Tower : MonoBehaviour {
 
         Vector3 dir = closestEnemy.transform.position - partToRotate.position;
         partToRotate.LookAt(closestEnemy.transform.position, Vector3.up);
-        shootPosition.LookAt(closestEnemy.transform.position, Vector3.up);
+        for(int i = 0; i < shootPosition.Length; i++) {
+            shootPosition[i].LookAt(closestEnemy.transform.position, Vector3.up);
+        }
+        if(shootIndex == shootPosition.Length) {
+            shootIndex = 0;
+        }
 
         if(!isShooting) {
             StartCoroutine(Shoot(closestEnemy));
@@ -44,10 +50,11 @@ public class Tower : MonoBehaviour {
     private IEnumerator Shoot(GameObject enemy) {
         isShooting = true;
 
-        GameObject newBullet = Instantiate(bullet, shootPosition.position, Quaternion.identity);
+        GameObject newBullet = Instantiate(bullet, shootPosition[shootIndex].position, Quaternion.identity);
         Bullet newBulletComponent = newBullet.GetComponent<Bullet>();
         newBulletComponent.SetProperties(damage, bulletSpeed);
-        newBulletComponent.SeekTarget(enemy.transform, shootPosition.rotation);
+        newBulletComponent.SeekTarget(enemy.transform, shootPosition[shootIndex].rotation);
+        shootIndex++;
 
         yield return new WaitForSeconds(1f / rateOfFire);
         isShooting = false;
