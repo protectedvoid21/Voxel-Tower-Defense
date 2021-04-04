@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
 public class Enemy : MonoBehaviour {
     public int maxHealth;
@@ -11,15 +9,12 @@ public class Enemy : MonoBehaviour {
     private Transform[] waypoints;
     private int waypointIndex = 0;
 
-    public GameObject healthBar;
-    public TextMeshProUGUI healthText;
-    public Image fillBar;
-    private Transform playerCamera;
+    private HealthBar healthBar;
 
     private void Awake() {
         health = maxHealth;
-        playerCamera = GameObject.FindGameObjectWithTag("CameraParent").transform;
-        hpBarUpdate();
+        healthBar = FindObjectOfType<HealthBar>();
+        healthBar.HpBarUpdate(health, maxHealth);
 
         waypoints = GameObject.FindObjectOfType<Waypoints>().waypoints;
         transform.position = waypoints[waypointIndex].position;
@@ -28,9 +23,7 @@ public class Enemy : MonoBehaviour {
 
     private void Update() {
         transform.position = Vector3.MoveTowards(transform.position, waypoints[waypointIndex].position, speed * 0.1f * Time.deltaTime);
-        transform.rotation = Quaternion.LookRotation(waypoints[waypointIndex].position - transform.position); 
-
-        healthBar.transform.LookAt(transform.position + playerCamera.rotation * Vector3.forward);
+        transform.rotation = Quaternion.LookRotation(waypoints[waypointIndex].position - transform.position);
 
         if(Vector3.Distance(transform.position, waypoints[waypointIndex].position) < 0.01f) {
             waypointIndex++;
@@ -43,15 +36,10 @@ public class Enemy : MonoBehaviour {
 
     public void GetDamage(int damage) {
         health -= damage;
-        hpBarUpdate();
-        if(health < 0) {
+        healthBar.HpBarUpdate(health, maxHealth);
+        if(health <= 0) {
             PlayerStats.AddCash(worth);
             Destroy(gameObject);
         }
-    }
-
-    private void hpBarUpdate() {
-        fillBar.fillAmount = (float)health / (float)maxHealth;
-        healthText.text = health.ToString() + "/" + maxHealth.ToString();        
     }
 }

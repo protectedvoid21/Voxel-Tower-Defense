@@ -17,7 +17,7 @@ public class WaveSpawner : MonoBehaviour {
 
     public Wave[] waves;
 
-    private enum WaveType { Waiting, Spawning, InGame }
+    private enum WaveType { Waiting, Spawning, InGame, Completed }
     private WaveType waveType;
 
     private int waveIndex = 0;
@@ -35,6 +35,10 @@ public class WaveSpawner : MonoBehaviour {
 
     private void Update() {
         if(waveType == WaveType.Waiting) {
+            if(waves.Length == waveIndex + 1) {
+                waveType = WaveType.Completed;
+                print("Game completed");
+            }
             timeCountdown -= Time.deltaTime;
             if(timeCountdown <= 0) {
                 timeCountdown = timeBetweenWaves;

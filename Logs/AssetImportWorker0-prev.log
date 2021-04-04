@@ -1,0 +1,279 @@
+Using pre-set license
+Built from '2021.1/release' branch; Version is '2021.1.1f1 (6fdc41dfa55a) revision 7330881'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 18363.1440; Version 1909; 64bit' Language: 'pl' Physical Memory: 16317 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.1.1f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Programowanie/Unity_projects/Towers!
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+50266
+Successfully changed project path to: D:/Programowanie/Unity_projects/Towers!
+D:/Programowanie/Unity_projects/Towers!
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 37.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.1.1f1 (6fdc41dfa55a)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.1f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Programowanie/Unity_projects/Towers!/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 750 (ID=0x1381)
+    Vendor:   NVIDIA
+    VRAM:     2007 MB
+    Driver:   27.21.14.6089
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.1f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.1f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56604
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004098 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 35.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.752 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001208 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.581 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.23 seconds
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1546 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.4 MB.
+System memory in use after: 98.5 MB.
+
+Unloading 67 unused Assets to reduce memory usage. Loaded Objects now: 2030.
+Total: 2.948000 ms (FindLiveObjects: 0.205500 ms CreateObjectMapping: 0.151300 ms MarkObjects: 2.398900 ms  DeleteObjects: 0.191100 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Prefabs/Towers/Basic Tower #1.asset
+  artifactKey: Guid(0767bd6180743204693fdae2bfd330ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Basic Tower #1.asset using Guid(0767bd6180743204693fdae2bfd330ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64f7cdaa0f3a86016f393b154ac34741') in 0.083313 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1279.142238 seconds.
+  path: Assets/Scripts/CashAnimation.cs
+  artifactKey: Guid(42e2b2d39e735144aaafdda8bd01da4d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Scripts/CashAnimation.cs using Guid(42e2b2d39e735144aaafdda8bd01da4d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: 'f64e07db0a33599d4e6a652ad2f93223') in 0.188642 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/Models/Towers/Basic/basicUpgraded2-1.obj
+  artifactKey: Guid(89834051b5b894c49957106b283ffa28) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Models/Towers/Basic/basicUpgraded2-1.obj using Guid(89834051b5b894c49957106b283ffa28) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: 'e7de0363ebb5d2b3b007e7e89e551411') in 0.096162 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000294 seconds.
+  path: Assets/Models/Towers/Basic/basicUpgraded2-1-0.mtl
+  artifactKey: Guid(7eeca1170bb7df64a8c9bda1ffdb2db7) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Models/Towers/Basic/basicUpgraded2-1-0.mtl using Guid(7eeca1170bb7df64a8c9bda1ffdb2db7) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: 'dbef2b32de5aba4e937e6846102030db') in 0.013465 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/Prefabs/Towers/Basic Tower #1.asset
+  artifactKey: Guid(0767bd6180743204693fdae2bfd330ea) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Prefabs/Towers/Basic Tower #1.asset using Guid(0767bd6180743204693fdae2bfd330ea) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: 'dbf841589afb43d4fbb8a0b94828d25b') in 0.016756 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000280 seconds.
+  path: Assets/Scripts/WaveSpawner.cs
+  artifactKey: Guid(4669d942fa88c5b47ae98a80d51c9a27) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Scripts/WaveSpawner.cs using Guid(4669d942fa88c5b47ae98a80d51c9a27) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: '13d8d0e43b4cf8b8010926c7d5de4178') in 0.010836 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000309 seconds.
+  path: Assets/Models/Towers/Basic/basicUpgraded1-0.png
+  artifactKey: Guid(f6dfdbe15506c9e44886155d7bb3f391) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Models/Towers/Basic/basicUpgraded1-0.png using Guid(f6dfdbe15506c9e44886155d7bb3f391) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: '35b9aaa50041d1f2f7c16d328162c3c6') in 0.037587 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/Scripts/ShopManager.cs
+  artifactKey: Guid(44e538e040c3a3d46a7f7d6f56373b84) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Scripts/ShopManager.cs using Guid(44e538e040c3a3d46a7f7d6f56373b84) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: 'de5993474cc4963efbe6d7997831c6ad') in 0.008666 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000259 seconds.
+  path: Assets/Scripts/Tower.cs
+  artifactKey: Guid(3ef9e77b94959cd459211687cb88f58a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Scripts/Tower.cs using Guid(3ef9e77b94959cd459211687cb88f58a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: '85e7f7f6abe524a083612e750b5911fc') in 0.010621 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000259 seconds.
+  path: Assets/TextMesh Pro/Fonts/PlaymegamesReguler-2OOee SDF.asset
+  artifactKey: Guid(2d616280c7826574cb91075799062680) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/TextMesh Pro/Fonts/PlaymegamesReguler-2OOee SDF.asset using Guid(2d616280c7826574cb91075799062680) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: 'c1ae2a57acea8939e27cabdbc84448f2') in 0.051310 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/Models/Towers/Basic/basicUpgraded2-1.mtl
+  artifactKey: Guid(fb5d7b54df4685041ac209e6582a45ba) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Models/Towers/Basic/basicUpgraded2-1.mtl using Guid(fb5d7b54df4685041ac209e6582a45ba) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: '8d458ca5ab4db675f6778d34dc095ab4') in 0.008317 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000256 seconds.
+  path: Assets/Materials/Grass.mat
+  artifactKey: Guid(5fb09e8ba2166624ebfbb5caca085035) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Materials/Grass.mat using Guid(5fb09e8ba2166624ebfbb5caca085035) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: '00123ad465b9eb4937476d8bfe9b994b') in 0.033226 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/Models/Towers/Basic/basicUpgraded1-2.mtl
+  artifactKey: Guid(bb9c946df5a903d4aacdeadd30c9c5e2) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Models/Towers/Basic/basicUpgraded1-2.mtl using Guid(bb9c946df5a903d4aacdeadd30c9c5e2) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: 'cf721858acdb422434144f76730ffd72') in 0.010159 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Scripts/PlayerStats.cs
+  artifactKey: Guid(c8ec8f27b7f217b4b822477cfe5b3538) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Scripts/PlayerStats.cs using Guid(c8ec8f27b7f217b4b822477cfe5b3538) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: '7ff4ddcc981ea0c6839788d3363be63b') in 0.028478 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/Scripts/TowerType.cs
+  artifactKey: Guid(399f4cf6bd126c14c95dce6e937e9d76) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Scripts/TowerType.cs using Guid(399f4cf6bd126c14c95dce6e937e9d76) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: 'ab628ac083d451179269462f36c3a53e') in 0.008549 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Models/Towers/Basic/basicUpgraded2-1-2.obj
+  artifactKey: Guid(04e62315b4978514c9e8146c40d4af68) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Models/Towers/Basic/basicUpgraded2-1-2.obj using Guid(04e62315b4978514c9e8146c40d4af68) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: 'fe1e7c552a85a32c727c49b7dbaf8951') in 0.027166 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Models/Towers/Basic/basicUpgraded2-1.png
+  artifactKey: Guid(6c0d71296c82c5546838a865a7fefd96) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Models/Towers/Basic/basicUpgraded2-1.png using Guid(6c0d71296c82c5546838a865a7fefd96) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: 'a8480b94d4deb74f6e343027be818628') in 0.008894 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000514 seconds.
+  path: Assets/Models/Towers/Basic/basicUpgraded2-1-2.png
+  artifactKey: Guid(401cdbefe27896145886d4e81f8a0ea5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Models/Towers/Basic/basicUpgraded2-1-2.png using Guid(401cdbefe27896145886d4e81f8a0ea5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: '6d82a8d996b54aa2cfe44872d92c0417') in 0.009341 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/Models/Towers/Basic/basicUpgraded2-1-0.obj
+  artifactKey: Guid(f5adfdf0dafef6b459a3e6e1d9ced8ca) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Models/Towers/Basic/basicUpgraded2-1-0.obj using Guid(f5adfdf0dafef6b459a3e6e1d9ced8ca) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: '04bf4309a8dc33597368d27e7ef90195') in 0.021857 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Models/Towers/Basic/basicUpgraded1-2.obj
+  artifactKey: Guid(77d6c0a8cf3e13f43b5ed00085c8b837) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Models/Towers/Basic/basicUpgraded1-2.obj using Guid(77d6c0a8cf3e13f43b5ed00085c8b837) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: '9ac21934cfd6ddb85b5fb02d0a7d2c02') in 0.011321 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/Materials/Black.mat
+  artifactKey: Guid(47a17da4476754d4a9bf5554d675913d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Materials/Black.mat using Guid(47a17da4476754d4a9bf5554d675913d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: 'f58b99dfb414b39b7c96a1aba5a7b98f') in 0.007979 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/Prefabs/Towers/Basic Tower.asset
+  artifactKey: Guid(b949f43f82c818249a80cd9491219cc6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Prefabs/Towers/Basic Tower.asset using Guid(b949f43f82c818249a80cd9491219cc6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: '4d14df05383879e4acc8a191796831b6') in 0.013930 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/Models/Towers/Basic/basicUpgraded1-0.obj
+  artifactKey: Guid(fd05a4c13be320747a116068ed790e2f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Models/Towers/Basic/basicUpgraded1-0.obj using Guid(fd05a4c13be320747a116068ed790e2f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: '6863926085d5cec37ec4ef3109c151fe') in 0.010186 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000256 seconds.
+  path: Assets/Prefabs/Towers/Machine Tower.asset
+  artifactKey: Guid(40364fb3375f95244a1af56a2cfb9cec) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Prefabs/Towers/Machine Tower.asset using Guid(40364fb3375f95244a1af56a2cfb9cec) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: 'd12c461d5e6679a8f1231f85a4eefc3f') in 0.030194 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000256 seconds.
+  path: Assets/Scenes/Level01.unity
+  artifactKey: Guid(300325d09328cff4b86a54de16ea30f3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Scenes/Level01.unity using Guid(300325d09328cff4b86a54de16ea30f3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: '696f2b4536a671e9408756b1408d3bca') in 0.008801 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/Scripts/Enemy.cs
+  artifactKey: Guid(2b410ec66512aef45a866ae54aabec8a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Scripts/Enemy.cs using Guid(2b410ec66512aef45a866ae54aabec8a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: '323efeeebcb54d4202eeca9e986b37b4') in 0.009855 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/Prefabs/Towers/Basic Tower.prefab
+  artifactKey: Guid(248dcd1d4e469934c96653f78de9f818) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Prefabs/Towers/Basic Tower.prefab using Guid(248dcd1d4e469934c96653f78de9f818) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: '99a5272fcb39dcf3dc584ecc936f8d4f') in 0.009799 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000269 seconds.
+  path: Assets/Models/Towers/Basic/basicUpgraded2-1-2.mtl
+  artifactKey: Guid(d096453fb067cad42820d9a4d0d61b6a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Models/Towers/Basic/basicUpgraded2-1-2.mtl using Guid(d096453fb067cad42820d9a4d0d61b6a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: '41d4a5b9cb87c04eb69dd560fa45d426') in 0.010527 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/Models/Towers/Basic/basicUpgraded1-0.mtl
+  artifactKey: Guid(68ff55e899556014995da16b35c6f335) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Models/Towers/Basic/basicUpgraded1-0.mtl using Guid(68ff55e899556014995da16b35c6f335) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: '742289c2e54b1e9d7ae146c4134100fb') in 0.008311 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000260 seconds.
+  path: Assets/Prefabs/Towers/Basic Tower #1.prefab
+  artifactKey: Guid(390a6d041bc8758478497dc302ddd48a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Prefabs/Towers/Basic Tower #1.prefab using Guid(390a6d041bc8758478497dc302ddd48a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: 'ce1009979ddd03d0a4616505d3fc9a30') in 0.008583 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/Prefabs/Enemies/Yellow Worm.prefab
+  artifactKey: Guid(eae181b2562d1fc4286e19e58f8db98b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Prefabs/Enemies/Yellow Worm.prefab using Guid(eae181b2562d1fc4286e19e58f8db98b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: '0f66e97c8012aec664a5b966a53909d4') in 0.023440 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/Models/Towers/Basic/basicUpgraded2-1-0.png
+  artifactKey: Guid(81ba721d04b60b44ab4f6fda6d00a504) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Models/Towers/Basic/basicUpgraded2-1-0.png using Guid(81ba721d04b60b44ab4f6fda6d00a504) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: 'f1713f3d8c0762be95aad0b60b0f8642') in 0.007916 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/Prefabs/Towers/Machine Tower.prefab
+  artifactKey: Guid(7cb20f896a4c0b54f84bcbcfcdbac5e8) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Prefabs/Towers/Machine Tower.prefab using Guid(7cb20f896a4c0b54f84bcbcfcdbac5e8) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: '38666364c72b00d60fae2233797981a3') in 0.008346 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/Prefabs/Health Bar.prefab
+  artifactKey: Guid(e60903f87adf5cb43bb17780849050f9) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Prefabs/Health Bar.prefab using Guid(e60903f87adf5cb43bb17780849050f9) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: '8424ebdb393d52151de37a07dbe2e8aa') in 0.008576 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000333 seconds.
+  path: Assets/Models/Towers/Basic/basicUpgraded1-2.png
+  artifactKey: Guid(1a62ef37aa5bd094aabd75362253ba14) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Models/Towers/Basic/basicUpgraded1-2.png using Guid(1a62ef37aa5bd094aabd75362253ba14) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)  -> (artifact id: '0cae6cce8126fc6c107a48d61cdcaec2') in 0.008737 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

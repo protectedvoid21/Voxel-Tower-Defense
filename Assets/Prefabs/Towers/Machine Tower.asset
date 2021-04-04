@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 399f4cf6bd126c14c95dce6e937e9d76, type: 3}
   m_Name: Machine Tower
   m_EditorClassIdentifier: 
-  name: Machine
-  towerPrefab: {fileID: 7571780130118493764, guid: 3a5211f04cf3414478140781f69e6227, type: 3}
+  towerName: Machine
+  towerPrefab: {fileID: 7470896501985865725, guid: 7cb20f896a4c0b54f84bcbcfcdbac5e8, type: 3}
   cost: 50

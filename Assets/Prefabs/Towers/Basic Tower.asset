@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 399f4cf6bd126c14c95dce6e937e9d76, type: 3}
   m_Name: Basic Tower
   m_EditorClassIdentifier: 
-  name: Basic
-  towerPrefab: {fileID: 8081059744092920609, guid: 332d769913973714f8e047e1360b6fed, type: 3}
+  towerName: Basic
+  towerPrefab: {fileID: 800088587530960170, guid: 248dcd1d4e469934c96653f78de9f818, type: 3}
+  upgradeTower: {fileID: 11400000, guid: 0767bd6180743204693fdae2bfd330ea, type: 2}
   cost: 30

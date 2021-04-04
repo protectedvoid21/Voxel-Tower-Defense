@@ -56,7 +56,7 @@ public class Tower : MonoBehaviour {
         newBulletComponent.SeekTarget(enemy.transform, shootPosition[shootIndex].rotation);
         shootIndex++;
 
-        yield return new WaitForSeconds(1f / rateOfFire);
+        yield return new WaitForSeconds(10f / rateOfFire);
         isShooting = false;
     }
 

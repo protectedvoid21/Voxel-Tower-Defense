@@ -1,6 +1,7 @@
 using UnityEngine;
 
 public class BuildManager : MonoBehaviour {
+    public PlateUI plateUI;
     private ShopManager shopManager;
 
     private TowerType towerToBuild;
@@ -26,7 +27,7 @@ public class BuildManager : MonoBehaviour {
     public void Build(Plate plate) {
         if(towerToBuild != null && canBuild && !plate.hasTower) {
             PlayerStats.RemoveCash(towerToBuild.cost);
-            Instantiate(towerToBuild.towerPrefab, plate.transform.position, Quaternion.identity);
+            plate.Build(towerToBuild);
         }
     }
 }

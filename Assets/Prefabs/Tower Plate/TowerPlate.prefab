@@ -62,6 +62,8 @@ MonoBehaviour:
   hoverElement: {fileID: 365544720819759958}
   hoverColor: {r: 0.28866017, g: 1, b: 0, a: 1}
   noBuildColor: {r: 1, g: 0, b: 0, a: 1}
+  plateUI: {fileID: 1482725590113178023, guid: bdb1ce6c604dea4439aa4341e044da7c, type: 3}
+  hasTower: 0
 --- !u!1001 &2167016287911691534
 PrefabInstance:
   m_ObjectHideFlags: 0

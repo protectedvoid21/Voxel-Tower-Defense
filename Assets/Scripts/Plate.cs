@@ -9,6 +9,7 @@ public class Plate : MonoBehaviour {
     public Color noBuildColor;
 
     private BuildManager buildManager;
+    private TowerType tower;
     public bool hasTower = false;
 
     private void Start() {
@@ -18,10 +19,18 @@ public class Plate : MonoBehaviour {
     }
 
     private void OnMouseDown() {
-        if(!hasTower) {
+        if(hasTower) {
+            buildManager.plateUI.SetTarget(this);
+        }
+        else {
             buildManager.Build(this);
             hasTower = true;
         }
+    }
+
+    public void Build(TowerType tower) {
+        this.tower = tower;
+        Instantiate(tower.towerPrefab, transform.position, Quaternion.identity);
     }
 
     private void OnMouseOver() {

@@ -56,13 +56,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _BumpScale: 1
-    - _Cutoff: 0.5
+    - _Cutoff: 0.494
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.201
+    - _Glossiness: 0
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 1
@@ -74,6 +75,6 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.036712356, g: 0.7075472, b: 0.076996, a: 1}
+    - _Color: {r: 0.05490196, g: 0.6156863, b: 0.03529412, a: 1}
     - _EmissionColor: {r: 0.38682127, g: 0.6132076, b: 0.26900142, a: 1}
   m_BuildTextureStacks: []
