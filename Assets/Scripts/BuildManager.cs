@@ -19,15 +19,18 @@ public class BuildManager : MonoBehaviour {
     }
     
     public void SelectBuildTower(TowerType tower) {
-        if(PlayerStats.money >= tower.cost) {
-            towerToBuild = tower;
-        }
+        towerToBuild = tower;
+    }
+
+    public void DeleteBuildTower() {
+        towerToBuild = null;
     }
 
     public void Build(Plate plate) {
         if(towerToBuild != null && canBuild && !plate.hasTower) {
             PlayerStats.RemoveCash(towerToBuild.cost);
             plate.Build(towerToBuild);
+            DeleteBuildTower();
         }
     }
 }

@@ -10,7 +10,8 @@ public class Plate : MonoBehaviour {
 
     private BuildManager buildManager;
     private TowerType tower;
-    public bool hasTower = false;
+    private GameObject towerOnPlate;
+    public bool hasTower { get { return tower != null; }}
 
     private void Start() {
         hoverRenderer = hoverElement.GetComponent<MeshRenderer>();
@@ -24,13 +25,31 @@ public class Plate : MonoBehaviour {
         }
         else {
             buildManager.Build(this);
-            hasTower = true;
         }
     }
 
-    public void Build(TowerType tower) {
-        this.tower = tower;
-        Instantiate(tower.towerPrefab, transform.position, Quaternion.identity);
+    public TowerType GetTowerType() {
+        return tower;
+    }
+
+    public void Build(TowerType towerToBuild) {
+        if(hasTower) {
+            DestroyTower();
+        }
+        tower = towerToBuild;
+        towerOnPlate = Instantiate(tower.towerPrefab, transform.position, Quaternion.identity);
+    }
+
+    public void Upgrade() {
+        if(tower.upgradeTower.cost <= PlayerStats.money) {
+            PlayerStats.RemoveCash(tower.upgradeTower.cost);
+            Build(tower.upgradeTower);
+        }
+    }
+
+    public void DestroyTower() {
+        Destroy(towerOnPlate);
+        tower = null;
     }
 
     private void OnMouseOver() {

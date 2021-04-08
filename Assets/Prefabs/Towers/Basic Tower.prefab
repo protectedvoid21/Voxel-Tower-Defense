@@ -52,7 +52,7 @@ MonoBehaviour:
   partToRotate: {fileID: 3205400909492938358}
   shootPosition:
   - {fileID: 7787251544288890487}
-  bullet: {fileID: 8865170543294560546, guid: 747592800dd454b46a0e72880be4c2ec, type: 3}
+  bullet: {fileID: 8225721917165442520, guid: db571e2b0b01a604cb55d8a283eafaff, type: 3}
 --- !u!1 &1024162714642585203
 GameObject:
   m_ObjectHideFlags: 0

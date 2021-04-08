@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class WaveSpawner : MonoBehaviour {
@@ -23,6 +24,7 @@ public class WaveSpawner : MonoBehaviour {
     private int waveIndex = 0;
 
     public Transform spawnPoint;
+    public Text waveText;
 
     public float timeBetweenWaves;
     private float timeCountdown;
@@ -31,6 +33,7 @@ public class WaveSpawner : MonoBehaviour {
 
     private void Start() {
         waveType = WaveType.Waiting;
+        WaveTextUpdate();
     }
 
     private void Update() {
@@ -58,6 +61,7 @@ public class WaveSpawner : MonoBehaviour {
     }
 
     private IEnumerator SpawnWave() {
+        WaveTextUpdate();
         spawning = true;
         for(int i = 0; i < waves[waveIndex].enemyList.Length; i++) {
             for(int j = 0; j < waves[waveIndex].enemyList[i].count; j++) {
@@ -68,6 +72,10 @@ public class WaveSpawner : MonoBehaviour {
         waveIndex++;
         waveType = WaveType.InGame;
         spawning = false;
+    }
+
+    private void WaveTextUpdate() {
+        waveText.text = "Wave : " + (waveIndex + 1).ToString() + "/" + waves.Length.ToString();
     }
 
     private bool isEnemyAlive() {

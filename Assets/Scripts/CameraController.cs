@@ -5,9 +5,14 @@ public class CameraController : MonoBehaviour {
     private float moveSpeed;
     public float scrollSpeed;
 
-    private float zoom = 10f;
+    private float zoom;
+    private Vector3 lastPosition;
 
     public KeyCode fasterMove;
+
+    private void Start() {
+        zoom = transform.position.y;
+    }
 
     private void Update() {
         moveSpeed = MoveSpeed;
