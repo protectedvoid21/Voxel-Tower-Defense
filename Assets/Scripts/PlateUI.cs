@@ -19,24 +19,31 @@ public class PlateUI : MonoBehaviour {
         gameObject.SetActive(true);
     }
 
+    private void Update() {
+        if(Input.GetMouseButtonDown(1) && selectedPlate != null) {
+            DeselectTarget();
+        }
+    }
+
     private void TowerStatsDisplay() {
         if(selectedPlate.GetTowerType().upgradeTower != null) {
-            upgradeText.text = "Upgrade : " + selectedPlate.GetTowerType().upgradeTower.cost + "$";
-            sellText.text = "Sell : " + selectedPlate.GetTowerType().upgradeTower.GetSellValue() + "$";  
+            upgradeText.text = "Upgrade : " + (selectedPlate.GetTowerType().upgradeTower.cost - selectedPlate.GetTowerType().cost).ToString() + "$";
         }
-        else {
+        else { 
             upgradeText.text = "Not available";
             upgradeButton.interactable = false;
         }
+        sellText.text = "Sell : " + selectedPlate.GetTowerType().GetSellValue() + "$";
 
         Tower selectedTower = selectedPlate.GetTowerType().towerPrefab.GetComponent<Tower>();
-        towerName.text = selectedTower.name;
+        towerName.text = selectedPlate.name;
         damageText.text = "Damage : " + selectedTower.damage.ToString();
         rateOfFireText.text = "Rate of Fire : " + selectedTower.rateOfFire.ToString();
         rangeText.text = "Range : " + selectedTower.range.ToString();
     }
 
     private void DeselectTarget() {
+        //selectedPlate.GetTowerType().towerPrefab.GetComponent<Tower>().outline.enabled = false;
         selectedPlate = null;
         gameObject.SetActive(false);
     }
@@ -47,7 +54,7 @@ public class PlateUI : MonoBehaviour {
     }
 
     public void Sell() {
-        PlayerStats.AddCash(selectedPlate.GetTowerType().cost * 7 / 10);
+        PlayerStats.AddCash(selectedPlate.GetTowerType().GetSellValue());
         selectedPlate.DestroyTower();
         DeselectTarget();
     }

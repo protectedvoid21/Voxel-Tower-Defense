@@ -41,8 +41,8 @@ public class Plate : MonoBehaviour {
     }
 
     public void Upgrade() {
-        if(tower.upgradeTower.cost <= PlayerStats.money) {
-            PlayerStats.RemoveCash(tower.upgradeTower.cost);
+        if(tower.upgradeTower.cost - tower.cost <= PlayerStats.money) {
+            PlayerStats.RemoveCash(tower.upgradeTower.cost - tower.cost);
             Build(tower.upgradeTower);
         }
     }
@@ -56,7 +56,7 @@ public class Plate : MonoBehaviour {
         if(buildManager.canBuild) {
             hoverRenderer.material.color = hoverColor;
         }
-        if(!buildManager.canBuild || hasTower){
+        if(!buildManager.canBuild && !hasTower){
             hoverRenderer.material.color = noBuildColor;
         }
     }

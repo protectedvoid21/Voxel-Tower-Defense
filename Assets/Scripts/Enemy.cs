@@ -1,8 +1,10 @@
 using UnityEngine;
 
+[RequireComponent(typeof(EnemyBuff))]
 public class Enemy : MonoBehaviour {
     public int maxHealth;
-    public float speed;
+    public float startSpeed;
+    [HideInInspector] public float speed;
     public int worth;
     private int health;
     
@@ -13,12 +15,14 @@ public class Enemy : MonoBehaviour {
 
     private void Awake() {
         health = maxHealth;
+        speed = startSpeed;
         healthBar = FindObjectOfType<HealthBar>();
         healthBar.HpBarUpdate(health, maxHealth);
 
         waypoints = GameObject.FindObjectOfType<Waypoints>().waypoints;
         transform.position = waypoints[waypointIndex].position;
         waypointIndex++;
+        transform.rotation = Quaternion.LookRotation(waypoints[waypointIndex].position - transform.position);
     }
 
     private void Update() {

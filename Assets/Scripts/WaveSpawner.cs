@@ -38,7 +38,7 @@ public class WaveSpawner : MonoBehaviour {
 
     private void Update() {
         if(waveType == WaveType.Waiting) {
-            if(waves.Length == waveIndex + 1) {
+            if(waves.Length == waveIndex) {
                 waveType = WaveType.Completed;
                 print("Game completed");
             }

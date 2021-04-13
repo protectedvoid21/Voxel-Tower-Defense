@@ -91,7 +91,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6118083704344702241}
-  - component: {fileID: 6565190389051894064}
+  - component: {fileID: 7948809860857128592}
   m_Layer: 0
   m_Name: Yellow Worm
   m_TagString: Enemy
@@ -115,7 +115,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6565190389051894064
+--- !u!114 &7948809860857128592
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,9 +127,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b410ec66512aef45a866ae54aabec8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 40
-  speed: 8
-  worth: 6
+  maxHealth: 0
+  startSpeed: 0
+  speed: 0
+  worth: 0
 --- !u!1001 &4344385422352524744
 PrefabInstance:
   m_ObjectHideFlags: 0
