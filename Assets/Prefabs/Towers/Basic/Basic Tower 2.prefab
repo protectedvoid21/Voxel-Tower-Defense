@@ -48,6 +48,9 @@ MonoBehaviour:
   damage: 18
   range: 4
   rateOfFire: 16
+  rendererParts:
+  - {fileID: 180575897638803189}
+  - {fileID: 8573320370446343864}
   bulletSpeed: 4
   partToRotate: {fileID: 7895537545483544853}
   shootPosition:
@@ -257,5 +260,10 @@ PrefabInstance:
 --- !u!4 &1369984468131920499 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 04e62315b4978514c9e8146c40d4af68, type: 3}
+  m_PrefabInstance: {fileID: 1479873248550411672}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &180575897638803189 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7635826562936255635, guid: 04e62315b4978514c9e8146c40d4af68, type: 3}
   m_PrefabInstance: {fileID: 1479873248550411672}
   m_PrefabAsset: {fileID: 0}

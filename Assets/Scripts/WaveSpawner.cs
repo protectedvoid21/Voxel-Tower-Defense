@@ -21,7 +21,7 @@ public class WaveSpawner : MonoBehaviour {
     private enum WaveType { Waiting, Spawning, InGame, Completed }
     private WaveType waveType;
 
-    private int waveIndex = 0;
+    private int waveIndex;
 
     public Transform spawnPoint;
     public Text waveText;
@@ -63,9 +63,9 @@ public class WaveSpawner : MonoBehaviour {
     private IEnumerator SpawnWave() {
         WaveTextUpdate();
         spawning = true;
-        for(int i = 0; i < waves[waveIndex].enemyList.Length; i++) {
-            for(int j = 0; j < waves[waveIndex].enemyList[i].count; j++) {
-                Instantiate(waves[waveIndex].enemyList[i].enemy, spawnPoint.position, Quaternion.identity);
+        foreach(var enemyWave in waves[waveIndex].enemyList) {
+            for(int j = 0; j < enemyWave.count; j++) {
+                Instantiate(enemyWave.enemy, spawnPoint.position, Quaternion.identity);
                 yield return new WaitForSeconds(waves[waveIndex].delay);
             }
         }

@@ -21,6 +21,7 @@ public class Bullet : MonoBehaviour {
     private void Update() {
         if(target == null) {
             Destroy(gameObject);
+            return;
         }
 
         transform.Translate(Vector3.forward * speed * Time.deltaTime);

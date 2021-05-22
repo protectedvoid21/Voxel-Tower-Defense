@@ -11,7 +11,7 @@ public class Plate : MonoBehaviour {
     private BuildManager buildManager;
     private TowerType tower;
     private GameObject towerOnPlate;
-    public bool hasTower { get { return tower != null; }}
+    public bool hasTower => tower != null;
 
     private void Start() {
         hoverRenderer = hoverElement.GetComponent<MeshRenderer>();
@@ -56,12 +56,20 @@ public class Plate : MonoBehaviour {
         if(buildManager.canBuild) {
             hoverRenderer.material.color = hoverColor;
         }
-        if(!buildManager.canBuild && !hasTower){
+        if(!buildManager.canBuild && !hasTower) {
             hoverRenderer.material.color = noBuildColor;
+        }
+
+        if(hasTower) {
+            towerOnPlate.GetComponent<Tower>().HoverTower(buildManager.hoverTowerMaterial);
         }
     }
 
     private void OnMouseExit() {
         hoverRenderer.material.color = defaultColor;
+
+        if(hasTower) {
+            towerOnPlate.GetComponent<Tower>().HoverTower(buildManager.defaultTowerPalette);
+        }
     }
 }

@@ -1,10 +1,3 @@
-Base path: 'C:/Program Files/Unity/Hub/Editor/2021.1.1f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2021.1.1f1/Editor/Data/PlaybackEngines'
+Base path: 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 
-Cmd: disassembleShader
- name=Custom/Outline Mask platform=d3d11 type=15 mask=6 insize=642 outsize=1375 ok=1
-
-Cmd: disassembleShader
- name=Custom/Outline Mask platform=d3d11 type=17 mask=6 insize=250 outsize=761 ok=1
-
-Cmd: shutdown

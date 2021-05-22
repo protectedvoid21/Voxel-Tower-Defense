@@ -27,6 +27,7 @@ public class PlateUI : MonoBehaviour {
 
     private void TowerStatsDisplay() {
         if(selectedPlate.GetTowerType().upgradeTower != null) {
+            upgradeButton.interactable = true;
             upgradeText.text = "Upgrade : " + (selectedPlate.GetTowerType().upgradeTower.cost - selectedPlate.GetTowerType().cost).ToString() + "$";
         }
         else { 
@@ -36,7 +37,7 @@ public class PlateUI : MonoBehaviour {
         sellText.text = "Sell : " + selectedPlate.GetTowerType().GetSellValue() + "$";
 
         Tower selectedTower = selectedPlate.GetTowerType().towerPrefab.GetComponent<Tower>();
-        towerName.text = selectedPlate.name;
+        towerName.text = selectedPlate.GetTowerType().name;
         damageText.text = "Damage : " + selectedTower.damage.ToString();
         rateOfFireText.text = "Rate of Fire : " + selectedTower.rateOfFire.ToString();
         rangeText.text = "Range : " + selectedTower.range.ToString();

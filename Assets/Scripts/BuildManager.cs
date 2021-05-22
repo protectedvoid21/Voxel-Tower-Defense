@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class BuildManager : MonoBehaviour {
     public PlateUI plateUI;
+    public Material defaultTowerPalette;
+    public Material hoverTowerMaterial;
     private ShopManager shopManager;
 
     private TowerType towerToBuild;
@@ -11,7 +13,7 @@ public class BuildManager : MonoBehaviour {
             if(towerToBuild != null) {
                 return PlayerStats.money >= towerToBuild.cost;
             }
-        return false;
+            return false;
     }}
 
     private void Awake() {
@@ -22,15 +24,11 @@ public class BuildManager : MonoBehaviour {
         towerToBuild = tower;
     }
 
-    public void DeleteBuildTower() {
-        towerToBuild = null;
-    }
-
     public void Build(Plate plate) {
         if(towerToBuild != null && canBuild && !plate.hasTower) {
             PlayerStats.RemoveCash(towerToBuild.cost);
             plate.Build(towerToBuild);
-            DeleteBuildTower();
+            towerToBuild = null;
         }
     }
 }

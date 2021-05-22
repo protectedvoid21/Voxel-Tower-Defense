@@ -129,5 +129,7 @@ MonoBehaviour:
   damage: 0
   range: 3
   rateOfFire: 0
+  rendererParts:
+  - {fileID: 7226968354442430377}
   slowPercentage: 20
   slowDuration: 1

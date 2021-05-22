@@ -43,6 +43,7 @@ public class Enemy : MonoBehaviour {
         healthBar.HpBarUpdate(health, maxHealth);
         if(health <= 0) {
             PlayerStats.AddCash(worth);
+            AudioManager.instance.Play("enemy_death");
             Destroy(gameObject);
         }
     }

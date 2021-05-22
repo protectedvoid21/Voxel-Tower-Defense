@@ -47,6 +47,7 @@ public class TowerShooting : Tower {
     private IEnumerator Shoot(GameObject enemy) {
         isShooting = true;
 
+        AudioManager.instance.Play("tower_shoot");
         GameObject newBullet = Instantiate(bullet, shootPosition[shootIndex].position, Quaternion.identity);
         Bullet newBulletComponent = newBullet.GetComponent<Bullet>();
         newBulletComponent.SetProperties(damage, bulletSpeed);

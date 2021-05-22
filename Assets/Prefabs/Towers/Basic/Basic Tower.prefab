@@ -48,6 +48,9 @@ MonoBehaviour:
   damage: 12
   range: 3
   rateOfFire: 8
+  rendererParts:
+  - {fileID: 8518882669305381293}
+  - {fileID: 4465739503910669040}
   bulletSpeed: 4
   partToRotate: {fileID: 3205400909492938358}
   shootPosition:
