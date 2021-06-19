@@ -11,7 +11,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>DefenseGame</RootNamespace>
     <ProjectGuid>{6e81c7a0-936f-3b4a-ac2f-8da5393fdc1e}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
@@ -41,19 +41,22 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
      <Compile Include="Assets\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\Waypoints.cs" />
+     <Compile Include="Assets\Scripts\Menu\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\Menu\LevelPicker.cs" />
      <Compile Include="Assets\Scripts\ShopManager.cs" />
      <Compile Include="Assets\Scripts\TowerType.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
+     <Compile Include="Assets\Scripts\Sound.cs" />
+     <Compile Include="Assets\Scripts\Menu\CameraSelect.cs" />
      <Compile Include="Assets\Scripts\Tower.cs" />
      <Compile Include="Assets\Scripts\EnemyBuff.cs" />
      <Compile Include="Assets\Scripts\Plate.cs" />
      <Compile Include="Assets\Scripts\TowerSlowing.cs" />
-     <Compile Include="Assets\Scripts\CashAnimation.cs" />
+     <Compile Include="Assets\Scripts\NumberAnimation.cs" />
      <Compile Include="Assets\Scripts\PlateUI.cs" />
-     <Compile Include="Assets\Scripts\MenuManager.cs" />
+     <Compile Include="Assets\Scripts\Menu\MenuManager.cs" />
      <Compile Include="Assets\Scripts\WaveSpawner.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\Bullet.cs" />
@@ -61,13 +64,12 @@
      <Compile Include="Assets\Scripts\BuildManager.cs" />
      <Compile Include="Assets\Scripts\TowerShooting.cs" />
      <Compile Include="Assets\Scripts\PlayerStats.cs" />
-     <Compile Include="Assets\Scripts\Sound.cs" />
+     <Compile Include="Assets\Scripts\Menu\GameOverMenu.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
@@ -76,13 +78,11 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
-     <None Include="Assets\QuickOutline\Readme.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
-     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />

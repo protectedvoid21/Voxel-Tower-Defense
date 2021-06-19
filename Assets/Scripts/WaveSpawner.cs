@@ -1,8 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class WaveSpawner : MonoBehaviour {
+    [Header("Current level")]
+    [SerializeField] private int levelIndex;
+    
     [System.Serializable]
     public class Wave {
         public string name;
@@ -16,17 +20,18 @@ public class WaveSpawner : MonoBehaviour {
         }
     }
 
-    public Wave[] waves;
+    [SerializeField] private Wave[] waves;
 
     private enum WaveType { Waiting, Spawning, InGame, Completed }
     private WaveType waveType;
 
-    private int waveIndex;
+    public int waveIndex { get; private set; }
+    public int maxWaves => waves.Length;
 
-    public Transform spawnPoint;
-    public Text waveText;
+    [SerializeField] private Transform spawnPoint;
+    [SerializeField] private Text waveText;
 
-    public float timeBetweenWaves;
+    [SerializeField] private float timeBetweenWaves;
     private float timeCountdown;
 
     private bool spawning = false;
@@ -40,6 +45,11 @@ public class WaveSpawner : MonoBehaviour {
         if(waveType == WaveType.Waiting) {
             if(waves.Length == waveIndex) {
                 waveType = WaveType.Completed;
+
+                if(PlayerPrefs.GetInt("unlockedLevel") <= levelIndex) {
+                    PlayerPrefs.SetInt("unlockedLevel", levelIndex + 1);
+                }
+                SceneManager.LoadScene("LevelSelect");
                 print("Game completed");
             }
             timeCountdown -= Time.deltaTime;
@@ -54,7 +64,7 @@ public class WaveSpawner : MonoBehaviour {
             }
         }
         if(waveType == WaveType.InGame) {
-            if(!isEnemyAlive()) {
+            if(!IsEnemyAlive()) {
                 waveType = WaveType.Waiting;
             }
         }
@@ -78,10 +88,7 @@ public class WaveSpawner : MonoBehaviour {
         waveText.text = "Wave : " + (waveIndex + 1).ToString() + "/" + waves.Length.ToString();
     }
 
-    private bool isEnemyAlive() {
-        if(GameObject.FindGameObjectsWithTag("Enemy").Length == 0) {
-            return false;
-        }
-        return true;
+    private bool IsEnemyAlive() {
+        return GameObject.FindGameObjectsWithTag("Enemy").Length != 0;
     }
 }

@@ -2,8 +2,12 @@ using UnityEngine;
 
 public class BuildManager : MonoBehaviour {
     public PlateUI plateUI;
+    
+    [Header("Tower hover materials")]
     public Material defaultTowerPalette;
     public Material hoverTowerMaterial;
+    public Material selectedTowerMaterial; 
+        
     private ShopManager shopManager;
 
     private TowerType towerToBuild;

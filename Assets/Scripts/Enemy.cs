@@ -2,10 +2,11 @@ using UnityEngine;
 
 [RequireComponent(typeof(EnemyBuff))]
 public class Enemy : MonoBehaviour {
-    public int maxHealth;
+    [SerializeField] private int maxHealth;
     public float startSpeed;
     [HideInInspector] public float speed;
-    public int worth;
+    [SerializeField] private int worth;
+    [SerializeField, Min(1)] private int lifeDecrease;
     private int health;
     
     private Transform[] waypoints;
@@ -34,6 +35,7 @@ public class Enemy : MonoBehaviour {
         }
 
         if(waypointIndex == waypoints.Length) {
+            PlayerStats.RemoveHealth(lifeDecrease);
             Destroy(gameObject);
         }
     }

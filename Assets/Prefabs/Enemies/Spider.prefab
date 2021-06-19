@@ -46,9 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 40
-  startSpeed: 5
+  startSpeed: 10
   speed: 7
   worth: 5
+  lifeDecrease: 2
 --- !u!1 &8397482647183638045
 GameObject:
   m_ObjectHideFlags: 0

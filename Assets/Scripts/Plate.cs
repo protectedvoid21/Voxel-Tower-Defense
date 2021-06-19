@@ -5,15 +5,15 @@ public class Plate : MonoBehaviour {
     private MeshRenderer hoverRenderer;
 
     private Color defaultColor;
-    public Color hoverColor;
-    public Color noBuildColor;
+    [SerializeField] private Color hoverColor;
+    [SerializeField] private Color noBuildColor;
 
     private BuildManager buildManager;
     private TowerType tower;
     private GameObject towerOnPlate;
     public bool hasTower => tower != null;
 
-    private void Start() {
+    private void Awake() {
         hoverRenderer = hoverElement.GetComponent<MeshRenderer>();
         defaultColor = hoverRenderer.sharedMaterial.color;
         buildManager = FindObjectOfType<BuildManager>();
@@ -52,7 +52,7 @@ public class Plate : MonoBehaviour {
         tower = null;
     }
 
-    private void OnMouseOver() {
+    private void OnMouseEnter() {
         if(buildManager.canBuild) {
             hoverRenderer.material.color = hoverColor;
         }

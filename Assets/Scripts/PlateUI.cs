@@ -18,6 +18,11 @@ public class PlateUI : MonoBehaviour {
         TowerStatsDisplay();
         gameObject.SetActive(true);
     }
+    
+    private void DeselectTarget() {
+        selectedPlate = null;
+        gameObject.SetActive(false);
+    }
 
     private void Update() {
         if(Input.GetMouseButtonDown(1) && selectedPlate != null) {
@@ -28,7 +33,7 @@ public class PlateUI : MonoBehaviour {
     private void TowerStatsDisplay() {
         if(selectedPlate.GetTowerType().upgradeTower != null) {
             upgradeButton.interactable = true;
-            upgradeText.text = "Upgrade : " + (selectedPlate.GetTowerType().upgradeTower.cost - selectedPlate.GetTowerType().cost).ToString() + "$";
+            upgradeText.text = "Upgrade : " + (selectedPlate.GetTowerType().upgradeTower.cost - selectedPlate.GetTowerType().cost) + "$";
         }
         else { 
             upgradeText.text = "Not available";
@@ -38,15 +43,9 @@ public class PlateUI : MonoBehaviour {
 
         Tower selectedTower = selectedPlate.GetTowerType().towerPrefab.GetComponent<Tower>();
         towerName.text = selectedPlate.GetTowerType().name;
-        damageText.text = "Damage : " + selectedTower.damage.ToString();
-        rateOfFireText.text = "Rate of Fire : " + selectedTower.rateOfFire.ToString();
-        rangeText.text = "Range : " + selectedTower.range.ToString();
-    }
-
-    private void DeselectTarget() {
-        //selectedPlate.GetTowerType().towerPrefab.GetComponent<Tower>().outline.enabled = false;
-        selectedPlate = null;
-        gameObject.SetActive(false);
+        damageText.text = "Damage : " + selectedTower.damage;
+        rateOfFireText.text = "Rate of Fire : " + selectedTower.rateOfFire;
+        rangeText.text = "Range : " + selectedTower.range;
     }
 
     public void Upgrade() {
