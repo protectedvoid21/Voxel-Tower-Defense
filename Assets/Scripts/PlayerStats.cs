@@ -43,7 +43,7 @@ public class PlayerStats : MonoBehaviour {
     }
 
     public static void RemoveHealth(int amount) {
-        if(health - amount >= 0) {
+        if(health - amount > 0) {
             instance.StartCoroutine(NumberAnimation.Animate(health, health - amount, instance.healthText));
             health -= amount;
         }

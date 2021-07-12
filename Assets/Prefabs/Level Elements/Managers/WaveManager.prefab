@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5304574187122782105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1579183554550434277}
+  - component: {fileID: 5816355120214483330}
+  m_Layer: 0
+  m_Name: WaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1579183554550434277
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5304574187122782105}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5816355120214483330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5304574187122782105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4669d942fa88c5b47ae98a80d51c9a27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelIndex: 1
+  waves:
+  - name: 'Wave : 1'
+    delay: 0
+    enemyList: []
+  - name: 'Wave : 2'
+    delay: 0
+    enemyList: []
+  - name: 'Wave : 3'
+    delay: 0
+    enemyList: []
+  - name: 'Wave : 4'
+    delay: 0
+    enemyList: []
+  - name: 'Wave : 5'
+    delay: 0
+    enemyList: []
+  - name: 'Wave : 6'
+    delay: 2
+    enemyList:
+    - enemy: {fileID: 7923601991150848801, guid: 68927ebb08e29e04eb92d74b162c7045, type: 3}
+      count: 5
+    - enemy: {fileID: 5128295152459778270, guid: 82e8a73fa1e0dfb4a9156895686d55b5, type: 3}
+      count: 5
+    - enemy: {fileID: 3048570100225985234, guid: 6f37f81bd545b044a9624bb757511717, type: 3}
+      count: 5
+  - name: 'Wave : 7'
+    delay: 2
+    enemyList:
+    - enemy: {fileID: 7923601991150848801, guid: 68927ebb08e29e04eb92d74b162c7045, type: 3}
+      count: 5
+    - enemy: {fileID: 5128295152459778270, guid: 82e8a73fa1e0dfb4a9156895686d55b5, type: 3}
+      count: 5
+    - enemy: {fileID: 3048570100225985234, guid: 6f37f81bd545b044a9624bb757511717, type: 3}
+      count: 5
+  spawnPoint: {fileID: 0}
+  waveText: {fileID: 0}
+  timeBetweenWaves: 2

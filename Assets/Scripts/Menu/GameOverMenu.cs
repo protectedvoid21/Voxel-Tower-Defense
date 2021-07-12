@@ -11,7 +11,7 @@ namespace DefenseGame.Menu {
         public void Display() {
             canvas.SetActive(true);
             WaveSpawner waveSpawner = FindObjectOfType<WaveSpawner>();
-            StartCoroutine(NumberAnimation.Animate(0, waveSpawner.waveIndex, waveSurvivedText));
+            waveSurvivedText.text = (waveSpawner.waveIndex - 1).ToString();
             waveMaxText.text = waveSpawner.maxWaves.ToString();
             Time.timeScale = 0;
         }

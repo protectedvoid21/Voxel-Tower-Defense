@@ -91,4 +91,14 @@ public class WaveSpawner : MonoBehaviour {
     private bool IsEnemyAlive() {
         return GameObject.FindGameObjectsWithTag("Enemy").Length != 0;
     }
+
+    private void OnValidate() {
+        for(int i = 0; i < waves.Length; i++) {
+            waves[i].name = $"Wave : {i + 1}";
+
+            if(waves[i].delay == 0) {
+                waves[i].delay = 2;
+            }
+        }
+    }
 }

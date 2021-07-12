@@ -18,6 +18,10 @@ public class EnemyBuff : MonoBehaviour {
             duration -= Time.deltaTime;
             yield return null;
         }
+        CancelSlow();
+    }
+
+    public void CancelSlow() {
         enemy.speed = enemy.startSpeed;
         isSlowed = false;
     }

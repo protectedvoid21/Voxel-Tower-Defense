@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 40
-  startSpeed: 10
+  startSpeed: 8
   speed: 7
   worth: 5
   lifeDecrease: 2
