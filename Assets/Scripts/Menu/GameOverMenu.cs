@@ -4,11 +4,14 @@ using TMPro;
 
 namespace DefenseGame.Menu {
     public class GameOverMenu : MonoBehaviour {
+        [SerializeField] private GameObject mainCanvas;
+        [Tooltip("Canvas with GameOver Menu")]
         [SerializeField] private GameObject canvas;
         [SerializeField] private TextMeshProUGUI waveSurvivedText;
         [SerializeField] private TextMeshProUGUI waveMaxText;
         
         public void Display() {
+            mainCanvas.SetActive(false);
             canvas.SetActive(true);
             WaveSpawner waveSpawner = FindObjectOfType<WaveSpawner>();
             waveSurvivedText.text = (waveSpawner.waveIndex - 1).ToString();

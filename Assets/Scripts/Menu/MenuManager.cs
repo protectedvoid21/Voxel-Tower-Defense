@@ -3,11 +3,14 @@ using UnityEngine.SceneManagement;
 
 namespace DefenseGame.Menu {
     public class MenuManager : MonoBehaviour {
-        public string playSceneName;
-
         public void StartGame() {
-            SceneManager.LoadScene(playSceneName);
+            SceneManager.LoadScene("LevelSelect");
         }
+
+        public void ToMainMenu() {
+            SceneManager.LoadScene("MainMenu");
+        }
+
         public void ExitGame() {
             Application.Quit();
         }

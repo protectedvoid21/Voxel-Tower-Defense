@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour {
     private HealthBar healthBar;
 
     private void Awake() {
+        gameObject.tag = "Enemy";
         health = maxHealth;
         speed = startSpeed;
         healthBar = FindObjectOfType<HealthBar>();
@@ -26,17 +27,16 @@ public class Enemy : MonoBehaviour {
         transform.rotation = Quaternion.LookRotation(waypoints[waypointIndex].position - transform.position);
     }
 
-    private void Update() {
+    private void Update() {    
         transform.position = Vector3.MoveTowards(transform.position, waypoints[waypointIndex].position, speed * 0.1f * Time.deltaTime);
         transform.rotation = Quaternion.LookRotation(waypoints[waypointIndex].position - transform.position);
 
         if(Vector3.Distance(transform.position, waypoints[waypointIndex].position) < 0.01f) {
             waypointIndex++;
-        }
-
-        if(waypointIndex == waypoints.Length) {
-            PlayerStats.RemoveHealth(lifeDecrease);
-            Destroy(gameObject);
+            if(waypointIndex == waypoints.Length) {
+                PlayerStats.RemoveHealth(lifeDecrease);
+                Destroy(gameObject);
+            }
         }
     }
 

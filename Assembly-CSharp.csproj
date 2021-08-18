@@ -56,7 +56,9 @@
      <Compile Include="Assets\Scripts\TowerShooting.cs" />
      <Compile Include="Assets\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\Waypoints.cs" />
+     <Compile Include="Assets\Scripts\CanvasPointerHandler.cs" />
      <Compile Include="Assets\Scripts\Menu\LevelPicker.cs" />
+     <Compile Include="Assets\Scripts\Menu\MenuManagerEsc.cs" />
      <Compile Include="Assets\Scripts\Sound.cs" />
      <Compile Include="Assets\Scripts\Plate.cs" />
      <Compile Include="Assets\Scripts\TowerSlowing.cs" />

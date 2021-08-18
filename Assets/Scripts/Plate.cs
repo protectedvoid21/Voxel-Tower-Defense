@@ -1,3 +1,4 @@
+using DefenseGame;
 using UnityEngine;
 
 public class Plate : MonoBehaviour {
@@ -20,6 +21,9 @@ public class Plate : MonoBehaviour {
     }
 
     private void OnMouseDown() {
+        if(CanvasPointerHandler.instance.IsMouseOverUI()) {
+            return;
+        }
         if(hasTower) {
             buildManager.plateUI.SetTarget(this);
         }
@@ -53,6 +57,9 @@ public class Plate : MonoBehaviour {
     }
 
     private void OnMouseEnter() {
+        if(CanvasPointerHandler.instance.IsMouseOverUI()) {
+            return;
+        }
         if(buildManager.canBuild) {
             hoverRenderer.material.color = hoverColor;
         }

@@ -13,7 +13,7 @@ public class EnemyBuff : MonoBehaviour {
         if(isSlowed == true) yield break;
         isSlowed = true;
 
-        enemy.speed = enemy.speed * (1 - (slowPercent * 0.01f));
+        enemy.speed *= (1 - (slowPercent * 0.01f));
         while(duration >= 0) {
             duration -= Time.deltaTime;
             yield return null;

@@ -20,15 +20,16 @@ public class ShopManager : MonoBehaviour {
         }
     }
 
-    public void SelectTower(string tower) {
-        for(int i = 0; i < towerList.Length; i++) {
-            if(towerList[i].towerType.name == tower) {
-                if(towerList[i].towerType.cost <= PlayerStats.money) {
-                    buildManager.SelectBuildTower(towerList[i].towerType);
+    public void SelectTower(string towerName) {
+        foreach(var tower in towerList) {
+            if(tower.towerType.name == towerName) {
+                if(tower.towerType.cost <= PlayerStats.money) {
+                    buildManager.SelectBuildTower(tower.towerType);
                 }
                 return;
             }
         }
-        Debug.LogError("The passed string : " + tower + " doesn't exist.");
+
+        Debug.LogError("The passed string : " + towerName + " doesn't exist.");
     }
 }

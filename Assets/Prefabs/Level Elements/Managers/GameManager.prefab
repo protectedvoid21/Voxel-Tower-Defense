@@ -296,6 +296,10 @@ PrefabInstance:
       propertyPath: plateUI
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4264747932920679798, guid: e477d1a40f03d644587405851a20473e, type: 3}
+      propertyPath: defaultTowerPalette
+      value: 
+      objectReference: {fileID: -8469494145858465668, guid: a160c10cf8549a34ab2e363e7f0a7881, type: 3}
     - target: {fileID: 5720822128385232315, guid: e477d1a40f03d644587405851a20473e, type: 3}
       propertyPath: m_RootOrder
       value: 3

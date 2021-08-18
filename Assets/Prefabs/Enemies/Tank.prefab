@@ -49,6 +49,7 @@ MonoBehaviour:
   startSpeed: 3
   speed: 7
   worth: 8
+  lifeDecrease: 5
 --- !u!1 &7303000769025219253
 GameObject:
   m_ObjectHideFlags: 0
